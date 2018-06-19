@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="assets/javascript/game.js"></script>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header>
+        <h1> Crystal Collector Game</h1>
+    </header>
+
+    <h2>Instructions:</h2>
+
+    <article>
+        <p>You will be given a random number at the start of the game</p>
+        <p>There are four buttons below. By clicking on a button you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes over the random number.</p>
+        <p>The value of each button is hidden from you until you click them.</p>
+        <p>Each time the game starts, the game will change the value of the buttons. </p>
+    </article>
+
+    <h2>Match Your Score To This number:</h2>
+
+    <div id="randomNumber"></div>
+
+    <h3>Your total score for this game:</h3>
+    <div id="totalScore"></div>
+
+    <div id="buttons">
+        <button id="btn1" class="btn">1</button>
+        <button id="btn2" class="btn">2</button>
+        <button id="btn3" class="btn">3</button>
+        <button id="btn4" class="btn">4</button>
+    </div>
+
+    <div id="scoreBox">
+        <p id = "wins">Wins: </p>
+        <p id = "losses">Losses: </p>
+    </div>
+    
+    
+    
+</body>
+</html>
