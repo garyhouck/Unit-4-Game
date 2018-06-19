@@ -25,8 +25,7 @@ button4 = Math.floor(Math.random() * 12) + 1;
 console.log(button1, button2, button3, button4);
 
  // reset game function 
- (function( $ ){
-    $.fn.reset = function() {
+    let reset = function() {
     random = Math.floor(Math.random()*101) +19;
     $('#randomNumber').text(random);
     button1 = Math.floor(Math.random() *12) +1;
@@ -35,20 +34,20 @@ console.log(button1, button2, button3, button4);
     button4 = Math.floor(Math.random() *12) +1;
     totalScore= 0;
     $("#totalScore").text(totalScore);
-    } 
- });
+    };
+ 
 
 // create a function to add the button values into var totalScore ??
 $("#btn1").on("click", function () {
 totalScore = button1 + totalScore;
 console.log("total score= " + totalScore);
 if (totalScore === random){
-    wins++;
-    $("#wins").append(wins);
+    // wins++;
+    $("#wins").text(++wins);
     reset();
 } else if (totalScore > random) {
-    losses++;
-    $("#losses").append(losses);
+    // losses++;
+    $("#losses").text(++losses );
     reset();
 }
 });
@@ -57,12 +56,12 @@ $("#btn2").on("click", function () {
     totalScore = button2 + totalScore;
     console.log("total score= " + totalScore);
     if (totalScore === random){
-        wins++;
-        $("#wins").append(wins);
+        // wins++;
+        $("#wins").text(++wins);
         reset();
     }  else if (totalScore > random) {
-        losses++;
-        $("#losses").append(losses);
+        // losses++;
+        $("#losses").text(++losses);
         reset();
     }
     });
@@ -71,12 +70,12 @@ $("#btn3").on("click", function () {
      totalScore =  button3 + totalScore;
      console.log("total score= " + totalScore);
      if (totalScore === random){
-        wins++;
-        $("#wins").append(wins);
+        // wins++;
+        $("#wins").text(++wins);
         reset();
     }  else if (totalScore > random) {
-        losses++;
-        $("#losses").append(losses);
+        // losses++;
+        $("#losses").text(++losses);
         reset();
     }
      });
@@ -85,20 +84,18 @@ $("#btn4").on("click", function () {
      totalScore =  button4 + totalScore;
      console.log("total score= " + totalScore);
      if (totalScore === random){
-        wins++;
-        $("#wins").append(wins);
+        // wins++;
+        $("#wins").text(++wins);
         reset();
     }  else if (totalScore > random) {
-        losses++;
+        // losses++;
         console.log("you lose");
         console.log("losses");
-        $("#losses").append(losses);
+        $("#losses").text(++losses);
         reset();
     }
     });
 
-   
-        
 // add function to add button values to totalScore div when clicked
 
 $(".btn").on("click", function () {
