@@ -5,46 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="assets/javascript/game.js"></script>
-<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h3 id="github"><a href="https://github.com/garyhouck/Unit-4-Game" target="_blank">View the code on Github</a></h3>
     <header>
-        <h1> Crystal Collector Game</h1>
+        <h1 class="animated flash"> Crystal Collector Game</h1>
     </header>
 
-    <h2>Instructions:</h2>
-
-    <article>
-        <p>You will be given a random number at the start of the game</p>
-        <p>There are four buttons below. By clicking on a button you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes over the random number.</p>
-        <p>The value of each button is hidden from you until you click them.</p>
-        <p>Each time the game starts, the game will change the value of the buttons. </p>
-    </article>
-
+    <!-- Directions -->
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Click for Instructions
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <article>
+                    <p>You will first start with a random number</p>
+                    <p>There are four crystals below, each one given a hidden value. Click them to add points to your score</p>
+                    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes over the random number.</p>
+                    
+                    <p>Each time the game starts, the game will change the value of the crystals. </p>
+                </article>
+            </div>
+          </div>
+        </div>       
+      </div>
+    
+   
+<div class="animated fadeInDownBig">
     <h2>Match Your Score To This number:</h2>
-
+      <p id="explain">- Click the crystals to add points -</p>
     <div id="randomNumber"></div>
-
+    </div>
+<div class="animated fadeInRightBig">
     <h3>Your total score for this game:</h3>
-    <div id="totalScore"></div>
+    <div id="totalScore">0</div>
+    </div>
 
     <div id="buttons">
-        <button id="btn1" class="btn">1</button>
-        <button id="btn2" class="btn">2</button>
-        <button id="btn3" class="btn">3</button>
-        <button id="btn4" class="btn">4</button>
+        <img src="./assets/images/1.png" id="btn1" class="btn animated shake">
+        <img src="./assets/images/2.png" id="btn2" class="btn animated shake">
+        <img src="./assets/images/3.png" id="btn3" class="btn animated shake">
+        <img src="./assets/images/4.png" id="btn4" class="btn animated shake">
     </div>
 
     <div id="scoreBox">
-        <h2>Wins: <span id="wins"></span> </h2>
-        <h2>Losses: <span id="losses"></span> </h2>
+        <h2>Wins: <span id="wins" class="animated shake"></span> </h2>
+        <h2>Losses: <span id="losses" class="animated shake"></span> </h2>
     </div>
     
     

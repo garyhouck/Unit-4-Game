@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: darkslategrey;
 }
 header {
     background-color: darkorange;
@@ -14,20 +15,19 @@ h1 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 10px;
+    animation-delay: 2s;
 }
 h2 {
     text-align: center;
     color: darkorange;
-    margin-bottom: 20px;
+    margin-bottom:0;
 }
 article {
-    border: 3px solid lightsalmon;
-    max-width: 1000px;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    text-align: center;
+    border-bottom: 3px solid lightsalmon;
+    
+    padding: 5px;
+   
+   font-size: .8em;
 }
 #randomNumber {
     background-color: lightsalmon;
@@ -65,19 +65,64 @@ h3 {
     
 }
 #totalScore {
-    width: 95px;
-    height: 20px;
-    padding-left: 5px;
+     width: 95px;  
     border: 2px solid lightblue;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
+    padding: 10px;
+    text-align: center;
+    color: darkorange;
     
 }
 #github {
 	margin-top: 10px;
 	margin-left: 10px;
-	float: left;
+    float: left;
+    font-size: 1em;
+}
+.btn {
+    width: 100px;
+    animation-delay: 1s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+.accordion {
+    width: 20%;    
+}
+.card-header {
+    background-color: lightblue;
+    color: darkslategray;   
+}
+#explain {
+    text-align: center;
+    color: white;
+}
+
+/* for smaller screens */
+
+@media only screen and (max-width: 900px) {
+    .accordion {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    h1 {
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+    header {
+        margin-bottom: 0;
+    }
+    .btn {
+        width: 80px;
+    }
+    #github {
+        display: none;
+    }
 }
 
 

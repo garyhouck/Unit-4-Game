@@ -50,6 +50,7 @@ if (totalScore === random){
     $("#losses").text(++losses );
     reset();
 }
+
 });
 
 $("#btn2").on("click", function () {
@@ -85,26 +86,29 @@ $("#btn4").on("click", function () {
      console.log("total score= " + totalScore);
      if (totalScore === random){
         // wins++;
-        $("#wins").text(++wins);
+        $("#wins").text(++wins);        
         reset();
     }  else if (totalScore > random) {
         // losses++;
         console.log("you lose");
         console.log("losses");
-        $("#losses").text(++losses);
+        $("#losses").text(++losses);        
         reset();
     }
     });
 
 // add function to add button values to totalScore div when clicked
 
-$(".btn").on("click", function () {
-    
+$(".btn").on("click", function () {    
    $("#totalScore").text(totalScore);
-
-
-
 });
+
+
+
+$("#accordionExample").on("click", function() {
+    console.log("click");
+    this.style.width = "100%";       
+})
 
 
 
